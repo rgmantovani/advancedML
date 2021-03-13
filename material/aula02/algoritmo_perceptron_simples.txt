@@ -1,0 +1,44 @@
+*** Algoritmo Treinamento do Perceptron Simples ***
+
+Entradas:
+    - conjunto de treinamento com exemplos rotulados [X | D]
+      * X = exemplos
+      * D = classes correspondentes
+
+      - taxa de aprendizagem (lnr.rate)
+      - pesos sinápticos (W) [opcional]
+      - número máximo de iterações para treinamento [n.iter]
+
+Saídas:
+    - W ajustados para todos os exemplos de treinamento
+    - numero de épocas
+
+
+Inicio Algoritmo
+
+  1. Iniciar o vetor W com valores aleatórios pequenos (se não foram informados)
+  - Sugestão: Valores entre [-0.5, 0.5], ou entre [-1, 1]
+
+  2. Iniciar o contador de epocas (epocas = 0)
+  3. Iniciar variavel indicadora de erros na predicao (Erro = TRUE)
+
+  4. Repetir (Enqto Erro == TRUE e epocas < n.Iter)
+
+      4.1 Erro = FALSE
+      4.2 Para todas as amostras de treinamento em X, fazer:
+
+        4.2.1 Calcular o sinal resultante do neurônio (spike)
+          V = W' * X
+        4.2.2 Calcular a sinal de saída do neuronio (Y)
+          Y = signal(V)
+        4.2.3 Verificar se houve erro na predicao do exemplo atual
+          Se Y (saida obtida) != D(i) (saida real)
+        4.2.4 Se houve erro, atualizar os pesos sinápticos
+          W = W + n * (D - Y) * X
+          erro = TRUE
+
+      4.3 incrementar o contador do numero de epocas
+      epocas = epocas + 1
+
+      Fim Repetir #4
+Fim Algoritmo

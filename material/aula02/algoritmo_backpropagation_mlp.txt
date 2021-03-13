@@ -1,0 +1,81 @@
+*** Algoritmo Treinamento do Perceptron Simples ***
+
+Entradas:
+    - conjunto de treinamento com exemplos rotulados [X | Y]
+      * X = exemplos
+      * D = classes correspondentes
+
+      - taxa de aprendizagem (lnr.rate)
+      - pesos sinápticos (Wh, Wo) [opcional]
+      - número máximo de iterações para treinamento [n.iter]
+
+Saídas:
+    - W ajustados para todos os exemplos de treinamento
+    - numero de épocas
+
+[input, hiddent, output]
+[i, j, k]
+
+Inicio Algoritmo
+
+  1. Definir a quantidade de neuronios em todas as camadas
+    - entrada (I), oculta (H), saida (O)
+
+  2. Iniciar as matrizes de pesos Wh e Wo com valores aleatórios pequenos
+  - Sugestão: Valores entre [-0.5, 0.5], ou entre [-1, 1]
+
+  3. Iniciar o contador de epocas (epocas = 0)
+
+  4. Repetir (Enqto avgError < tolerancia e epocas < n.Iter)
+
+      4.1 somaErro = 0
+
+      # epoca
+      4.2 Para todas as amostras de treinamento em X, fazer:
+        (iterador p - exemplo corrente Xp, Yp)
+
+        4.2.1 Acessar o exemplo a ser manipulado [Xp | Yp]
+
+        4.2.2 Propagar o sinal na rede (forward)
+
+          - calcular os sinais dos neuronios na camadas oculta
+            net.hidden = Wh * example
+
+          - calcular a ativação dos neuronios na camada oculta
+            fnet.hidden = fne(net.hidden)
+
+          - calcular os sinais dos neuronios na camada de saida
+            net.output = Wo * fnet.hidden  # lembrar de incluir o bias
+
+          - calcular a ativacao dos neuronios na camada de saida
+            fnet.output = fnet(net.output)
+
+
+        4.2.3 Calcular o sinal do erro nos neuronios na camada de saida
+          erro = Yp - Op
+          somaErro = somaErro + sum(erro^2)
+
+        # retroproagação
+
+        4.2.4 Computar os termos de erro das camadas (deltas)
+          - computar os termos de erro para a camada de saída
+            delta.output = erro & dfnet(fnet.output)
+
+          - computar os termos de erro para a cadama oculta
+            delta.hidden = dfnet(fnet.hidden)) * delta.output %*% Wo
+
+        4.2.5 Atualizar os pesos da camada oculta
+          - atualizar os pesos da camada de saída
+          Wo = Wo + lrn.rate * (delta.output * fnet.hidden)
+
+          - atualizar os pesos da camada oculta
+          Wh = Wh + lrn.rate * (delta.hidden * Xp)
+
+      4.3 Computar o erro total da epoca
+      avgError = somaErro / nrow(dataset)
+
+      4.4 incrementar o contador do numero de epocas
+      epocas = epocas + 1
+
+  Fim Repetir #4
+Fim Algoritmo
