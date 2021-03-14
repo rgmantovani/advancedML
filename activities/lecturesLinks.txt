@@ -1,0 +1,5 @@
+Links para video-aulas:
+
+Aula 01 Intro: https://drive.google.com/file/d/1BnsrkXj-aW3ncQuYUwh5ydhP7zbTdGCw/view?usp=sharing
+Aula 02A Perceptron: https://drive.google.com/file/d/17FErmtGomir1LWKdFYMZkgnxVACjmxNa/view?usp=sharing
+Aula 02B MLPs: https://drive.google.com/file/d/14h5VaS5Yu66wLzHPbyA2VPsTQZC5Vqsa/view?usp=sharing
