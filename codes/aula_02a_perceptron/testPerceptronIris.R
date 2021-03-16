@@ -1,29 +1,25 @@
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
+# loading our perceptron implementation
 source("./perceptron.R")
-
 library("ggplot2")
 
-# -----------------------------------------------------------------
-# -----------------------------------------------------------------
-
-seed.value = 24
-set.seed(seed.value)
+set.seed(24)
 
 # -----------------------------------------------------------------
-# Getting dataset from OpenML
+# Getting iris dataset
 # -----------------------------------------------------------------
 
 data = iris
 
-# Estatisticas
+# Statistics
 dim(data)
 names(data)
 summary(data$Species)
 
 # -----------------------------------------------------------------
-# data separability plot
+# plot: data separability
 # -----------------------------------------------------------------
 
 #jpeg('data_separability.jpg', width = 8, height = 8, units = 'in', res = 300)
@@ -34,10 +30,10 @@ pairs(data[,-ncol(data)], col=data$Species)
 # subsetting dataset
 # -----------------------------------------------------------------
 
-# Selecionando apenas 2 features do Iris
+# Selecting only two features + Class (Species)
 X = data[ , c(2,4,5)]
 
-# Binarizar o problema, 2 classes (Setosa x Virginica + Versicolor)
+# Binarizing the problem = 2 classes (Setosa VS Virginica + Versicolor)
 X$Species = ifelse(X$Species == "setosa", +1, -1)
 X = cbind(1, X)
 colnames(X)[1] = "bias"
@@ -48,6 +44,10 @@ colnames(X)[1] = "bias"
 
 obj = perceptron.train(train.set = X, lrn.rate = 0.1)
 
+# -----------------------------------------------------------------
+# Plot: error convergence
+# -----------------------------------------------------------------
+
 df = data.frame(1:obj$epochs, obj$avgErrorVec)
 colnames(df) = c("epoch", "avgError")
 
@@ -56,23 +56,18 @@ g = g + geom_line() + geom_point()
 g = g + scale_x_continuous(limit = c(1, nrow(df)))
 print(g)
 
-#ggsave(g, file = paste0("dataset_convergence_",
-#  seed.value,".jpg"), width = 7.95, height = 3.02, dpi = 480)
-
 # -----------------------------------------------------------------
-# plotting data
+# plot: viweing the data
 # -----------------------------------------------------------------
 
 X$Species = as.factor(X$Species)
 g2 = ggplot(X, mapping = aes(x = Sepal.Width, y = Petal.Width,
-  colour = Species, shape = Species))
+                             colour = Species, shape = Species))
 g2 = g2 + geom_point(size = 3) + theme_bw()
 g2 
-#ggsave(g2, file = paste0("dataset_", seed.value,".jpg"),
-#  width = 5, height = 4, dpi = 480)
 
 # -----------------------------------------------------------------
-# ploting the obtained hyperplane
+# plot: the obtained hyperplane
 # -----------------------------------------------------------------
 
 w0 = obj$weights[1] # bias weight
