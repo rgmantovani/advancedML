@@ -1,11 +1,14 @@
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
+# loading our mlp implementation
 source("./MLP.R")
+set.seed(1)
 
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
+#creates XOR dataset
 x1    = c(0,0,1,1)
 x2    = c(0,1,0,1)
 class = c(0,1,1,0)
@@ -14,53 +17,28 @@ dataset = data.frame(x1, x2, class)
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
-#  activation function
-fnet = function(x) {
-  y = 1 /(1 + exp(-x))
-  return(y)
-}
-
-# derivative function
-dfnet = function(x) {
-  y = x * (1-x)
-  return(y)
-}
-
-# -----------------------------------------------------------------
-# -----------------------------------------------------------------
-
-set.seed(1)
-
-# modelo = mlp.architecture(activation.f = fnet, d_activation = dfnet)
-# obj = mlp.backpropagation(modelo, dataset, eta=0.1, threshold=1e-3)
-# pred = mlp.forward(obj$modelo, c(0,0))
-
-# -----------------------------------------------------------------
-# -----------------------------------------------------------------
-
 # instantiate a mlp network
 model = mlp.create(input.length = 2, hidden.length = 2,
-  output.length = 1, fnet = fnet, dfnet = dfnet)
+  output.length = 1)
 
-# model$hidden = modelo$hidden
-# model$output = modelo$output
-
-obj2 = mlp.train(model = model, dataset = dataset, lrn.rate = 0.1,
+# defines the stopping criteria with and error < 0.001 and epochs < 100k
+obj = mlp.train(model = model, dataset = dataset, lrn.rate = 0.1,
   threshold = 1e-2, n.iter = 100000)
 
-pred2 = mlp.test(model = obj2$model, example = c(0,0))
-
-# predicted value output
-round(pred2$fnet.output)
+# predicting the output of an example
+pred2 = mlp.test(model = obj$model, example = c(0,0))
+print(round(pred2$fnet.output))
 
 # -----------------------------------------------------------------
+# Plotting the convergence curve
 # -----------------------------------------------------------------
 
 library(ggplot2)
 
-df = data.frame(1:length(obj2$errorVec), obj2$errorVec)
+df = data.frame(1:length(obj$errorVec), obj$errorVec)
 colnames(df) = c("epochs", "error")
 g = ggplot(df, aes(x = epochs, y = error)) + geom_line()
+g
 
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
