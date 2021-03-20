@@ -1,5 +1,12 @@
 Links para video-aulas:
 
+Repositorio: https://drive.google.com/drive/folders/1Zu-T8k6rTbeBTFe3koIkj-2R4NLz-ctg?usp=sharing
+
 Aula 01 Intro: https://drive.google.com/file/d/1BnsrkXj-aW3ncQuYUwh5ydhP7zbTdGCw/view?usp=sharing
 Aula 02A Perceptron: https://drive.google.com/file/d/17FErmtGomir1LWKdFYMZkgnxVACjmxNa/view?usp=sharing
 Aula 02B MLPs: https://drive.google.com/file/d/14h5VaS5Yu66wLzHPbyA2VPsTQZC5Vqsa/view?usp=sharing
+Aula 03 CNNs parte 1: https://drive.google.com/file/d/14xAGsjABwNFimo8WlKMoYTvaur9-VkHq/view?usp=sharing
+Aula 03 CNNs parte 2: https://drive.google.com/file/d/1qoPH5-q4TGdgiCTUtw4xmm5TzvN5uo9R/view?usp=sharing 
+Aula 03 CNNs parte 3: https://drive.google.com/file/d/1fbpXHxwOMlw4II8jL8YTf_91Bt4cMBRq/view?usp=sharing
+
+
