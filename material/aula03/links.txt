@@ -1,0 +1,23 @@
+# Cifar Dataset
+https://www.cs.toronto.edu/~kriz/cifar.html
+https://github.com/rstudio/keras/blob/master/vignettes/examples/cifar10_cnn.R
+https://keras.rstudio.com/articles/examples/cifar10_cnn.html
+
+# Mnist dataset
+http://yann.lecun.com/exdb/mnist/
+https://en.wikipedia.org/wiki/MNIST_database
+
+# Keras
+https://cran.r-project.org/web/packages/kerasR/vignettes/introduction.html
+https://tensorflow.rstudio.com/guide/keras/
+
+# Keras + CNN
+https://tensorflow.rstudio.com/guide/keras/examples/imdb_cnn/
+https://tensorflow.rstudio.com/guide/keras/examples/mnist_cnn/
+https://medium.com/unsa-jamil/building-a-convolutional-neural-network-cnn-in-keras-using-r-cecf13247bc7
+
+# Derivative of the RELU function
+https://stats.stackexchange.com/questions/333394/what-is-the-derivative-of-the-relu-activation-function
+
+# image classification problems and studies
+http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130
