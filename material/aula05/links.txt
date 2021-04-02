@@ -1,0 +1,10 @@
+AEs in Keras:
+https://www.pyimagesearch.com/2020/02/17/autoencoders-with-keras-tensorflow-and-deep-learning/
+https://towardsdatascience.com/deep-autoencoders-using-tensorflow-c68f075fd1a3
+
+
+Exemplo 01
+https://blog.keras.io/building-autoencoders-in-keras.html
+
+Exemplo 2 - Nice example:
+https://www.tensorflow.org/tutorials/generative/autoencoder
