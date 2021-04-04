@@ -8,5 +8,6 @@ Aula 02B MLPs: https://drive.google.com/file/d/14h5VaS5Yu66wLzHPbyA2VPsTQZC5Vqsa
 Aula 03 CNNs parte 1: https://drive.google.com/file/d/14xAGsjABwNFimo8WlKMoYTvaur9-VkHq/view?usp=sharing
 Aula 03 CNNs parte 2: https://drive.google.com/file/d/1qoPH5-q4TGdgiCTUtw4xmm5TzvN5uo9R/view?usp=sharing 
 Aula 03 CNNs parte 3: https://drive.google.com/file/d/1fbpXHxwOMlw4II8jL8YTf_91Bt4cMBRq/view?usp=sharing
-
-
+Aula 04 LSTMs parte 1: https://drive.google.com/file/d/1JBC5kngozYjsH_O106JBuT-ik-9RzKUd/view?usp=sharing
+Aula 04 LSTMs parte 2: https://drive.google.com/file/d/1_4Zf18Pqbyb1tgn-T2huuOhCt3PaASdJ/view?usp=sharing
+Aula 05 AEs: https://drive.google.com/file/d/1T9V6rNutMPnSctTtpzaBytP6y0gT8yxc/view?usp=sharing
