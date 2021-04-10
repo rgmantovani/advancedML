@@ -11,3 +11,4 @@ Aula 03 CNNs parte 3: https://drive.google.com/file/d/1fbpXHxwOMlw4II8jL8YTf_91B
 Aula 04 LSTMs parte 1: https://drive.google.com/file/d/1JBC5kngozYjsH_O106JBuT-ik-9RzKUd/view?usp=sharing
 Aula 04 LSTMs parte 2: https://drive.google.com/file/d/1_4Zf18Pqbyb1tgn-T2huuOhCt3PaASdJ/view?usp=sharing
 Aula 05 AEs: https://drive.google.com/file/d/1T9V6rNutMPnSctTtpzaBytP6y0gT8yxc/view?usp=sharing
+Aula 06 Ensembles: https://drive.google.com/file/d/1QxqBy2Z9JMUfebNcIA7XPbav4K82cWPF/view?usp=sharing
