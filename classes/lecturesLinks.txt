@@ -1,6 +1,6 @@
 Links para video-aulas:
 
-Repositorio: https://drive.google.com/drive/folders/1Zu-T8k6rTbeBTFe3koIkj-2R4NLz-ctg?usp=sharing
+Repositório: https://drive.google.com/drive/folders/1Zu-T8k6rTbeBTFe3koIkj-2R4NLz-ctg?usp=sharing
 
 Aula 01 Intro: https://drive.google.com/file/d/1BnsrkXj-aW3ncQuYUwh5ydhP7zbTdGCw/view?usp=sharing
 Aula 02A Perceptron: https://drive.google.com/file/d/17FErmtGomir1LWKdFYMZkgnxVACjmxNa/view?usp=sharing
@@ -13,3 +13,5 @@ Aula 04 LSTMs parte 2: https://drive.google.com/file/d/1_4Zf18Pqbyb1tgn-T2huuOhC
 Aula 05 AEs: https://drive.google.com/file/d/1T9V6rNutMPnSctTtpzaBytP6y0gT8yxc/view?usp=sharing
 Aula 06 Ensembles: https://drive.google.com/file/d/1QxqBy2Z9JMUfebNcIA7XPbav4K82cWPF/view?usp=sharing
 Aula 07 Swarm: https://drive.google.com/file/d/1MpZPoA23IzR_jPanCA_yI80hJhvG2HPW/view?usp=sharing
+Aula 08 DS Flow: https://youtu.be/KoNE5lfe2_k
+
