@@ -65,13 +65,17 @@ bagging.test = function(model, data) {
 # testing funcions
 # ----------------------------------------------------------
 
+# using iris as example
 train = iris[ c(1:30, 51:80, 101:131), ]
 test  = iris[-c(1:30, 51:80, 101:131), ]
 realClass = test$Species
 
+# training model
 model = bagging.train(data = train, n.learners = 10)
+# obtaining prediction
 preds = bagging.test(model = model, data = test[,-ncol(test)])
 
+# computing accuracy
 preds = factor(preds, levels = levels(realClass))
 tab.res = table(realClass,preds)
 acc = sum(diag(tab.res))/sum(tab.res)
